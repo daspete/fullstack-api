@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pm2 start --name="api1" yarn -- production 4000
+pm2 start --name="api2" yarn -- production 4001
+pm2 start --name="api3" yarn -- production 4002
+pm2 start --name="api4" yarn -- production 4003
+
+pm2 start --name="api5" yarn -- production 4004
+pm2 start --name="api6" yarn -- production 4005
+pm2 start --name="api7" yarn -- production 4006
+pm2 start --name="api8" yarn -- production 4007

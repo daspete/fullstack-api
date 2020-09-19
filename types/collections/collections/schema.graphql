@@ -1,0 +1,11 @@
+type Query {
+    Collections: [Collection]
+    CollectionByPermalink(permalink: String): Collection
+}
+
+type Collection {
+    _id: ID
+    title: String
+    pagecomponents: [Pagecomponent]
+    createdBy: User
+}

@@ -1,0 +1,14 @@
+scalar JSON
+
+type Query {
+    Pagecomponents(
+        active: Boolean
+    ): [Pagecomponent]
+}
+
+type Pagecomponent {
+    _id: ID
+    type: String
+    settings: JSON
+    content: JSON
+}

@@ -1,0 +1,51 @@
+{
+  "name": "manablox-api",
+  "version": "1.0.0",
+  "description": "simple web stack builder and configurator",
+  "repository": "https://github.com/manablox/mana-cli.git",
+  "author": "daspete <daspetemail@gmail.com>",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "production": "node index.js",
+    "reinstall": "rm -rf node_modules; rm -rf yarn.lock; yarn",
+    "release": "standard-version; git push --follow-tags origin master"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/*",
+      ".vscode/*"
+    ],
+    "ext": "js,json,mjs,graphql"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "commitizen": "^4.2.1",
+    "husky": "^4.3.0",
+    "standard-version": "^9.0.0"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.17.0",
+    "commander": "^6.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "find": "^0.3.0",
+    "glob-fs": "^0.1.7",
+    "graphql": "^15.3.0",
+    "graphql-tools": "^6.2.2",
+    "mongodb": "^3.6.2",
+    "nodemon": "^2.0.4"
+  }
+}
